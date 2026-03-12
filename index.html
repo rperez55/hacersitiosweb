@@ -73,18 +73,12 @@
       </a>
      <button  id="btn_8" class="OBJ-3 ActiveButton OBJ-4" style="position:absolute;left:41px;top:2336px;width:904px;height:85px;"></button>
     
-	
-
 <script>
   document.getElementById('btn_8').addEventListener('click', async () => {
     try {
-      await navigator.share({
-        title: document.title,
-        text: '¡Mira esta página!',
-        url: window.location.href
-      });
+      await navigator.Add to home screen;
     } catch (err) {
-      console.log('Error al compartir', err);
+      console.log('Error al agregar apantalla principal', err);
     }
   });
 </script>
@@ -93,6 +87,7 @@
 	  <script src="./script.js"></script>	  
   </body>
 </html>
+
 
 
 
