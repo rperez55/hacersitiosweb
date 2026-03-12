@@ -89,26 +89,11 @@
   });
 </script>
 		</div>
-	  <button id="btnCompartir" style="background:#3630a3;color:white;"> Compartir tarjeta</button> 
-
-<script>
-  document.getElementById('btnCompartir').addEventListener('click', async () => {
-    try {
-      await navigator.share({
-        title: 'Título de la web',
-        text: 'Mira este contenido increíble',
-        url: window.location.href
-      });
-      console.log('Compartido con éxito');
-    } catch (err) {
-      console.log('Error al compartir: ', err);
-    }
-  });
-</script>
-	  <script src="./script.js"></script>
-	  <button id="btnInstalar" style="text-decoration: none; padding: 18px; background-color: blue; border: 1px solid white; color: white; border-radius: 10px; float: center;font-size: 16px;position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">Añadir a Dr. José Regardiz a pantalla de inicio de tu celular</button>
+<button id="btnInstalar" style="text-decoration: none; padding: 18px; background-color: blue; border: 1px solid white; color: white; border-radius: 10px; float: center;font-size: 16px;position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">Añadir a Dr. José Regardiz a pantalla de inicio de tu celular</button>
+	  <script src="./script.js"></script>	  
   </body>
 </html>
+
 
 
 
