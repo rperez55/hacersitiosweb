@@ -58,9 +58,22 @@
       });
     </script>
   </head>
-	<button id="miBotón" onclick="this.style.display='none'">
-  Hacer clic en los 3 puntos y luego en agregar a pantalla principal(de esta manera esta tarjeta se guardara en  el teléfono-------?????
-</button>
+	<button id="btnCompartir">Compartir página</button>
+
+<script>
+  document.getElementById('btnCompartir').addEventListener('click', async () => {
+    try {
+      await navigator.share({
+        title: document.title,
+        text: '¡Mira esta página!',
+        url: window.location.href
+      });
+    } catch (err) {
+      console.log('Error al compartir', err);
+    }
+  });
+</script>
+
   <body style="height:2500px;background:#ffffff;">
     <div id="divMain" style="background:transparent;margin-left:auto;margin-right:auto;position:relative;width:980px;height:2500px;">
       <img alt="" src="wpimages/wpb404bd47_06.png" style="position:absolute;left:1px;top:0px;width:979px;height:2500px;">
@@ -78,6 +91,7 @@
     </div>
   </body>
 </html>
+
 
 
 
