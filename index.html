@@ -90,8 +90,34 @@
 </script>
 		</div>
 	  <script src="./script.js"></script>
+	  <button id="btnInstalar" style="display:none;">Agregar a pantalla de inicio</button>
+let promptInstalar = null;
+const btnInstalar = document.getElementById("btnInstalar");
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Previene que aparezca el mini-infobar nativo automáticamente
+  e.preventDefault();
+  // Guarda el evento para usarlo luego
+  promptInstalar = e;
+  // Muestra el botón de instalación
+  btnInstalar.style.display = 'block';
+});
+
+btnInstalar.addEventListener('click', async () => {
+  if (!promptInstalar) return;
+  // Muestra el cuadro de diálogo nativo
+  promptInstalar.prompt();
+  // Espera a ver si el usuario instaló la app
+  const { outcome } = await promptInstalar.userChoice;
+  if (outcome === 'accepted') {
+    btnInstalar.style.display = 'none';
+  }
+  promptInstalar = null;
+});
+
   </body>
 </html>
+
 
 
 
