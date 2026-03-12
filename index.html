@@ -76,9 +76,13 @@
 <script>
   document.getElementById('btn_8').addEventListener('click', async () => {
     try {
-      await navigator.home screen;
+      await navigator.share({
+        title: Hacer sitios web,
+        text: '¡Mira esta página!',
+        url: window.location.href
+      });
     } catch (err) {
-      console.log('Error al agregar a la pantalla principal', err);
+      console.log('Error al compartir', err);
     }
   });
 </script>
@@ -87,6 +91,7 @@
 	  <script src="./script.js"></script>	  
   </body>
 </html>
+
 
 
 
