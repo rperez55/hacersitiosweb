@@ -58,12 +58,6 @@
       });
     </script>
   </head>
-	<div class="contenedor-banner">
-    <div class="texto-animado">
-        ¡Este es un banner de ejemplo que se mueve y desaparece!
-    </div>
-</div>
-
   <body style="height:2500px;background:#ffffff;">
     <div id="divMain" style="background:transparent;margin-left:auto;margin-right:auto;position:relative;width:980px;height:2500px;">
       <img alt="" src="wpimages/wpb404bd47_06.png" style="position:absolute;left:1px;top:0px;width:979px;height:2500px;">
@@ -92,7 +86,50 @@
       </a>
      <button  id="btnInstalar" class="OBJ-3 ActiveButton OBJ-4" style="position:absolute;left:41px;top:2336px;width:904px;height:85px;"></button>
 		</div>
-	  <script src="./script.js"></script>	  
+	  <script src="./script.js"></script>
+	  <!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<style>
+  /* Estilos del banner */
+  #miBanner {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  /* Estilos del botón cerrar */
+  .cerrar-btn {
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 15px;
+  }
+</style>
+</head>
+<body>
+
+<!-- Estructura del Banner -->
+<div id="miBanner">
+  <marquee behavior="scroll" direction="left">
+    ¡Bienvenido a nuestratarjeta de presentación digital! Aprovecha las ofertas especiales de hoy para elaboración de tarjetas y sofware de historias medicas.
+  </marquee>
+  <span class="cerrar-btn" onclick="ocultarBanner()">X</span>
+</div>
+
+<script>
+  // Función para ocultar el banner
+  function ocultarBanner() {
+    document.getElementById('miBanner').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>
+
   </body>
 </html>
 
