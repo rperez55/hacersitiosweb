@@ -1,9 +1,13 @@
 window.onload = function() {
+    const popup = document.getElementById('miPopup');
+    
+    // 1. Mostrar después de 2 segundos (2000 ms)
     setTimeout(function() {
-        document.getElementById('miPopup').style.display = 'flex';
-    }, 3000); // 3000 milisegundos = 3 segundos
-};
+        popup.classList.add('mostrar');
+    }, 2000);
 
-function cerrarPopup() {
-    document.getElementById('miPopup').style.display = 'none';
-}
+    // 2. Ocultar automáticamente después de 6 segundos (6000 ms)
+    setTimeout(function() {
+        popup.classList.remove('mostrar');
+    }, 6000);
+};
