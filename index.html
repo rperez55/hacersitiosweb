@@ -87,48 +87,60 @@
      <button  id="btnInstalar" class="OBJ-3 ActiveButton OBJ-4" style="position:absolute;left:41px;top:2336px;width:904px;height:85px;"></button>
 		</div>
 	  <script src="./script.js"></script>
-	  <!DOCTYPE html>
+ </body>
+</html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
+<meta name="viewport" content="width=980">
 <style>
-  /* Estilos del banner */
-  #miBanner {
-    background-color: #ffcc00;
-    color: #333;
-    padding: 20px;
-    font-weight: bold;
-	  position: fixed; top:0%; left: 0%;
-	 font-size: 30px; 
+  /* Contenedor del banner */
+  .banner-container {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: fixed;top:0;left:0
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  /* Estilos del botón cerrar */
-  .cerrar-btn {
-    cursor: pointer;
-    font-weight: bold;
-    margin-left: 15px;
+
+  /* Animación del texto */
+  .banner-text {
+    white-space: nowrap;
+    animation: marquee 15s linear infinite;
+    font-family: sans-serif;
+    font-size: 40px;
   }
+
+  @keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+
+  /* Botón de cerrar */
+  .close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: 10px;
+    z-index: 10;
+  }
+
+  /* Ocultar banner */
+  .hidden { display: none; }
 </style>
 </head>
 <body>
-</html>
-<!-- Estructura del Banner -->
-<div id="miBanner">
-  <marquee scrollamount="15" direction="left">
-    ¡Bienvenido a nuestra tarjeta de presentación digital! Aprovecha las ofertas especiales de hoy para elaboración de tarjetas y sofware de historias medicas.
-  </marquee>
-  <span class="cerrar-btn" onclick="ocultarBanner()">X</span>
+
+<div id="myBanner" class="banner-container">
+  <div class="banner-text">¡Bienvenido a nuestra tarjeta de presentación digital! Aprovecha las ofertas especiales de hoy para elaboración de tarjetas y sofware de historias medicas.</div>
+  <button class="close-btn" onclick="document.getElementById('myBanner').classList.add('hidden')">❌​</button>
 </div>
 
-<script>
-  // Función para ocultar el banner
-  function ocultarBanner() {
-    document.getElementById('miBanner').style.display = 'none';
-  }
-</script>
- </body>
+</body>
 </html>
 
 
